@@ -177,9 +177,10 @@ body {
     left: 50%;
     top: 50%;
     z-index: -1;
-    height: 5px;
-    width: 5px;
-    background-color: red;
-    /* box-shadow: 0px 0px 5px; */
+    height: 10px;
+    width: 10px;
+    /* background-color: rgb(255, 0, 0, 0.44325); */
+    /* box-shadow: 2px 2px 5px; */
     border-radius: 50%;
+
 }
