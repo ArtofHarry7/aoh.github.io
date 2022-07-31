@@ -111,3 +111,37 @@ document.getElementById("contact").onclick = function() {
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Contact/mobile</a>$"
     ]);
 };
+
+const elements = document.getElementsByClassName("circle");
+
+var le = 300;
+var to = 300;
+
+let maxl = screen.availWidth-200;
+let maxt = screen.availHeight-200;
+
+function move_(element, i, n, gap, time){
+    console.log('hua');
+    var x = -1, y = -1;
+    var l = le+(i%n)*(gap+13)-(i/n)*(gap+13);
+    var t = to+(i%n)*(gap)+(i/n)*(gap);
+    var T = time;
+    setInterval(function(){
+        if(t >= maxt)
+            y = -1;
+        if(t <= 0)
+            y = 1;
+        if(l >= maxl)
+            x = -1;
+        if(l <= 0)
+            x = 1;
+        t += y;
+        l += x;
+        // T++;
+        element.style.top = t+"px";
+        element.style.left = l+"px";
+    }, time);
+};
+
+for(var i = 0; i < elements.length; i++)
+    move_(elements[i], i, 4, 60, 3);

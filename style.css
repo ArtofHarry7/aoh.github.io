@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     /* font-size: 16px; */
-    background-color: #0b022e;
     color: #fff;
     font-family: 'poppins', 'sans-serif';
 }
@@ -48,6 +47,7 @@ nav ul li a {
 body {
     padding: 3rem;
     padding-top: 1rem;
+    background-color: #0b022e;
 }
 
 .home {
@@ -133,7 +133,7 @@ body {
     top: 10px;
     height: 500px;
     width: 45%;
-    /* background-color: rgb(10, 10, 10); */
+    background-color: rgb(12, 12, 12);
     margin-right: 40px;
     border: 2px solid black;
     border-top-left-radius: 15px;
@@ -170,4 +170,16 @@ body {
 .blue-color {
     color: blue;
     font-weight: 27px;
+}
+
+.circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+    height: 5px;
+    width: 5px;
+    background-color: red;
+    /* box-shadow: 0px 0px 5px; */
+    border-radius: 50%;
 }
