@@ -45,8 +45,10 @@ document.getElementById("developer").onclick = function() {
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~</a>$ cd Developer<br>"+
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Developer</a>$ ls<br>"+
         "Currently persuing Bachelors of Technology with Computer Science in IIT BHU varanasi<br>"+
-        "Designed a simple food delivery website : <a href='http://artofharry7.pythonanywhere.com/menu/'>Delish</a><br>"+
-        "Here is my github profile : <a href='https://github.com/ArtofHarry7'>gitHub</a><br>"
+        "Designed a simple food delivery website : <a href='http://artofharry7.pythonanywhere.com/menu/' target='_blank' rel='noopener noreferrer'>Delish</a><br>"+
+        "Here is my github profile : <a href='https://github.com/ArtofHarry7' target='_blank' rel='noopener noreferrer'>gitHub</a><br>"+
+        "Here is my codeforces profile : <a href='https://codeforces.com/profile/Harshit_Singh' target='_blank' rel='noopener noreferrer'>CodeForces</a><br>"+
+        "Here is my codechef profile : <a href='https://www.codechef.com/users/artofharry' target='_blank' rel='noopener noreferrer'>CodeChef</a><br>"
     ]);
 };
 
@@ -55,8 +57,8 @@ document.getElementById("sketch").onclick = function() {
     resetTyped([
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~</a>$ cd Sketch Artist<br>"+
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Sketch Artist</a>$ ls<br>"+
-        "Instagram Art page : <a href='https://www.instagram.com/artofharry7/'>@ArtofHarry7</a><br>"+
-        "Facebook Art page : <a href='https://www.facebook.com/artofharry'>@Art Lover</a><br>"+
+        "Instagram Art page : <a href='https://www.instagram.com/artofharry7/' target='_blank' rel='noopener noreferrer'>@ArtofHarry7</a><br>"+
+        "Facebook Art page : <a href='https://www.facebook.com/artofharry' target='_blank' rel='noopener noreferrer'>@Art Lover</a><br>"+
         ""
     ]);
 };
@@ -66,7 +68,7 @@ document.getElementById("writer").onclick = function() {
     resetTyped([
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~</a>$ cd Writer<br>"+
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/writer</a>$ ls<br>"+
-        "Blog page : <a href='https://alfaz-e-harsh.blogspot.com/'>मुन्तज़िर</a><br>"+
+        "Blog page : <a href='https://alfaz-e-harsh.blogspot.com/' target='_blank' rel='noopener noreferrer'>मुन्तज़िर</a><br>"+
         ""
     ]);
 };
@@ -98,10 +100,10 @@ document.getElementById("contact").onclick = function() {
         "singhharshit9080@gmail.com<br>"+
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Contact/gmail</a>$ cd ..<br>"+
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Contact</a>$ cd linkedin Profile<br>"+
-        "<a href='https://www.linkedin.com/in/harshit-singh-5850131bb/'>Harshit Singh</a><br>"+
+        "<a href='https://www.linkedin.com/in/harshit-singh-5850131bb/' target='_blank' rel='noopener noreferrer'>Harshit Singh</a><br>"+
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Contact/Linkedin Profile</a>$ cd ..<br>"+
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Contact</a>$ cd Instagram<br>"+
-        "<a href='https://www.instagram.com/7purplethursday/'>@7purplethursday</a><br>"+
+        "<a href='https://www.instagram.com/7purplethursday/' target='_blank' rel='noopener noreferrer'>@7purplethursday</a><br>"+
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Contact/Instagram</a>$ cd ..<br>"+
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Contact</a>$ cd mobile<br>"+
         "8587864950<br>"+
