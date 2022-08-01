@@ -6,6 +6,10 @@
     font-family: 'poppins', 'sans-serif';
 }
 
+/* ::-webkit-scrollbar {
+    width: 0px;
+} */
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -83,6 +87,7 @@ body {
     color: #fff724;
     padding: 10px 30px;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .btn-fill {
@@ -93,13 +98,13 @@ body {
     text-decoration: none;
     border: 2px solid #fff724;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .type {
     display: flex;
     align-items: center;
     padding: 0.2rem;
-    
 }
 
 .icon {
@@ -124,6 +129,7 @@ body {
     background-color: rgb(255, 0, 0, 0.0);
     width: 100%;
     height: 20%;
+    cursor: pointer;
 }
 
 .terminal {

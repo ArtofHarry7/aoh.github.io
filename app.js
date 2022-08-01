@@ -112,52 +112,56 @@ document.getElementById("contact").onclick = function() {
     ]);
 };
 
-var str = "";
-for(var i = 0; i < 1000; i++)
-    str += "<div class='circle'></div>";
-document.getElementById("bg").innerHTML = str;
-
-const elements = document.getElementsByClassName("circle");
-
-let maxl = screen.availWidth-210;
-let maxt = screen.availHeight-210;
-let maxop = 100;
-
-function move(element){
-    console.log('hua');
-    var x = Math.floor(Math.random()*2);
-    var y = Math.floor(Math.random()*2);
-    var z = Math.floor(Math.random()*2);
-    if(x == 0)
-        x = -1;
-    if(y == 0)
-        y = -1;
-    if(z == 0)
-        z = -1;
-    var op = Math.floor(Math.random()*maxop);
-    var l = Math.floor(Math.random()*maxl);
-    var t = Math.floor(Math.random()*maxt);
-    setInterval(function(){
-        if(t >= maxt)
-            y = -1;
-        if(t <= 0)
-            y = 1;
-        if(l >= maxl)
+function twinkle(){
+    var str = "";
+    for(var i = 0; i < 1000; i++)
+        str += "<div class='circle'></div>";
+    document.getElementById("bg").innerHTML = str;
+    
+    const elements = document.getElementsByClassName("circle");
+    
+    let maxl = screen.width-200;
+    let maxt = screen.height-230;
+    let maxop = 100;
+    
+    function move(element){
+        console.log('hua');
+        var x = Math.floor(Math.random()*2);
+        var y = Math.floor(Math.random()*2);
+        var z = Math.floor(Math.random()*2);
+        if(x == 0)
             x = -1;
-        if(l <= 0)
-            x = 1;
-        if(op >= maxop)
+        if(y == 0)
+            y = -1;
+        if(z == 0)
             z = -1;
-        if(op <= 1)
-            z = 1;
-        op += z;
-        t += y;
-        l += x;
-        element.style.top = t+"px";
-        element.style.left = l+"px";
-        element.style.backgroundColor = "rgb(255, 0, 0,"+ 1/op + ")";
-    }, 3);
+        var op = Math.floor(Math.random()*maxop);
+        var l = Math.floor(Math.random()*maxl);
+        var t = Math.floor(Math.random()*maxt);
+        setInterval(function(){
+            if(t >= maxt)
+                y = -1;
+            if(t <= 0)
+                y = 1;
+            if(l >= maxl)
+                x = -1;
+            if(l <= 0)
+                x = 1;
+            if(op >= maxop)
+                z = -1;
+            if(op <= 1)
+                z = 1;
+            op += z;
+            t += y;
+            l += x;
+            element.style.top = t+"px";
+            element.style.left = l+"px";
+            element.style.backgroundColor = "rgb(255, 0, 0,"+ 1/op + ")";
+        }, 50);
+    };
+    
+    for(var i = 0; i < elements.length; i++)
+        move(elements[i], i);
 };
 
-for(var i = 0; i < elements.length; i++)
-    move(elements[i], i);
+twinkle();
