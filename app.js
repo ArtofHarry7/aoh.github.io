@@ -2,7 +2,7 @@
 
 var typed = new Typed(".auto-input", {
     strings: [
-        "Hi, I'm ...",
+        "Hi, I'm...",
         "Harshit, an Engineer",
         "Harsh, a Writer",
         "Harry, an Artist",
@@ -48,12 +48,13 @@ document.getElementById("developer").onclick = function() {
     document.getElementById("terminal-top").innerHTML = "@harry!~/Developer";
     resetTyped([
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~</a>$ cd Developer<br>"+
-        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Developer</a>$ ls<br>"+
+        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Developer</a>$ cat Developer.txt<br>"+
         "Currently persuing Bachelors of Technology with Computer Science in IIT BHU varanasi<br>"+
         "Designed a simple food delivery website : <a href='http://artofharry7.pythonanywhere.com/menu/' target='_blank' rel='noopener noreferrer'>Delish</a><br>"+
         "Here is my github profile : <a href='https://github.com/ArtofHarry7' target='_blank' rel='noopener noreferrer'>gitHub</a><br>"+
         "Here is my codeforces profile : <a href='https://codeforces.com/profile/Harshit_Singh' target='_blank' rel='noopener noreferrer'>CodeForces</a><br>"+
-        "Here is my codechef profile : <a href='https://www.codechef.com/users/artofharry' target='_blank' rel='noopener noreferrer'>CodeChef</a><br>"
+        "Here is my codechef profile : <a href='https://www.codechef.com/users/artofharry' target='_blank' rel='noopener noreferrer'>CodeChef</a><br>"+
+        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Developer</a>$"
     ]);
 };
 
@@ -61,10 +62,10 @@ document.getElementById("sketch").onclick = function() {
     document.getElementById("terminal-top").innerHTML = "@harry!~/Sketch Artist";
     resetTyped([
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~</a>$ cd Sketch Artist<br>"+
-        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Sketch Artist</a>$ ls<br>"+
+        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Sketch Artist</a>$ cat 'Art Works.txt'<br>"+
         "Instagram Art page : <a href='https://www.instagram.com/artofharry7/' target='_blank' rel='noopener noreferrer'>@ArtofHarry7</a><br>"+
         "Facebook Art page : <a href='https://www.facebook.com/artofharry' target='_blank' rel='noopener noreferrer'>@Art Lover</a><br>"+
-        ""
+        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Sketch Artist</a>$"
     ]);
 };
 
@@ -72,9 +73,9 @@ document.getElementById("writer").onclick = function() {
     document.getElementById("terminal-top").innerHTML = "@harry!~/Writer";
     resetTyped([
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~</a>$ cd Writer<br>"+
-        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/writer</a>$ ls<br>"+
+        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/writer</a>$ cat Writer.txt<br>"+
         "Blog page : <a href='https://alfaz-e-harsh.blogspot.com/' target='_blank' rel='noopener noreferrer'>मुन्तज़िर</a><br>"+
-        ""
+        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/writer</a>$"
     ]);
 };
 
@@ -82,10 +83,11 @@ document.getElementById("mimicry").onclick = function() {
     document.getElementById("terminal-top").innerHTML = "@harry!~/Mimicry Artist";
     resetTyped([
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~</a>$ cd Mimicry Artist<br>"+
-        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Mimicry Artist</a>$ ls<br>"+
+        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Mimicry Artist</a>$ cat 'Mimicry.txt'<br>"+
         "Nothing to show you yet<br>"+
         "Soon there will be something<br>"+
-        "Aa gaye mera tamasha dekhne<br>"
+        "Aa gaye mera tamasha dekhne<br>"+
+        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Mimicry Artist</a>$"
     ]);
 };
 
@@ -93,9 +95,10 @@ document.getElementById("flutist").onclick = function() {
     document.getElementById("terminal-top").innerHTML = "@harry!~/Flutist";
     resetTyped([
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~</a>$ cd Flutist<br>"+
-        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Flutist</a>$ ls<br>"+
+        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Flutist</a>$ cat 'Flutist.txt'<br>"+
         "Nothing to show you yet<br>"+
-        "Soon there will be something<br>"
+        "Soon there will be something<br>"+
+        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Flutist</a>$"
     ]);
 };
 
@@ -103,7 +106,7 @@ document.getElementById("contact").onclick = function() {
     document.getElementById("terminal-top").innerHTML = "@harry!~/Contact";
     resetTyped([
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~</a>$ cd Contact<br>"+
-        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Contact</a>$ ls<br>"+
+        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Contact</a>$ cat Contact.txt<br>"+
         "gmail1 : artofharry00@gmail.com<br>"+
         "gmail2 : singhharshit9080@gmail.com<br>"+
         "Linkedin : <a href='https://www.linkedin.com/in/harshit-singh-5850131bb/' target='_blank' rel='noopener noreferrer'>Harshit Singh</a><br>"+
