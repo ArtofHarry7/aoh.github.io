@@ -51,7 +51,8 @@ nav ul li a {
 body {
     padding: 3rem;
     padding-top: 1rem;
-    background-color: #0b022e;
+    /* background-color: #0b022e; */
+    background-color: #000;
 }
 
 .home {
@@ -183,10 +184,8 @@ body {
     left: 50%;
     top: 50%;
     z-index: -1;
-    height: 10px;
-    width: 10px;
-    /* background-color: rgb(255, 0, 0, 0.44325); */
-    /* box-shadow: 2px 2px 5px; */
+    height: 2px;
+    width: 2px;
     border-radius: 50%;
 
 }

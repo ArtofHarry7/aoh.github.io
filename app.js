@@ -112,9 +112,9 @@ document.getElementById("contact").onclick = function() {
     ]);
 };
 
-function twinkle(){
+function twinkle(n){
     var str = "";
-    for(var i = 0; i < 1000; i++)
+    for(var i = 0; i < n; i++)
         str += "<div class='circle'></div>";
     document.getElementById("bg").innerHTML = str;
     
@@ -122,46 +122,50 @@ function twinkle(){
     
     let maxl = screen.width-200;
     let maxt = screen.height-230;
-    let maxop = 100;
+    let maxop = 20;
     
+    function randomBais(){
+        var tmp = Math.floor(Math.random()*2);
+        if(tmp == 0)
+            tmp = -1;
+        return tmp;
+    };
+
+    function checkBais(tmp, mn, mx){
+        if(tmp >= mx || tmp <= mn)
+            return -1;
+        return 1;
+    }
+
+    var colors = [[255, 0, 0], [100, 155, 155], [45, 210, 100], [90, 255, 55]];
+
     function move(element){
-        console.log('hua');
-        var x = Math.floor(Math.random()*2);
-        var y = Math.floor(Math.random()*2);
-        var z = Math.floor(Math.random()*2);
-        if(x == 0)
-            x = -1;
-        if(y == 0)
-            y = -1;
-        if(z == 0)
-            z = -1;
+        var x = randomBais();
+        var y = randomBais();
+        var z = randomBais();
         var op = Math.floor(Math.random()*maxop);
         var l = Math.floor(Math.random()*maxl);
         var t = Math.floor(Math.random()*maxt);
+        var color = colors[0];
+        var cat = [0, 0, 0];
         setInterval(function(){
-            if(t >= maxt)
-                y = -1;
-            if(t <= 0)
-                y = 1;
-            if(l >= maxl)
-                x = -1;
-            if(l <= 0)
-                x = 1;
-            if(op >= maxop)
-                z = -1;
-            if(op <= 1)
-                z = 1;
+            y *= checkBais(t, 0, maxt);
+            x *= checkBais(l, 0, maxl);
+            z *= checkBais(op, 1, maxop);
             op += z;
             t += y;
             l += x;
+            console.log(color);
             element.style.top = t+"px";
             element.style.left = l+"px";
-            element.style.backgroundColor = "rgb(255, 0, 0,"+ 1/op + ")";
-        }, 50);
+
+            element.style.backgroundColor = "rgb(255, 255, 255," + 1/op + ")";
+
+        }, 100);
     };
-    
+
     for(var i = 0; i < elements.length; i++)
         move(elements[i], i);
 };
 
-twinkle();
+twinkle(500);
