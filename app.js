@@ -2,12 +2,15 @@
 
 var typed = new Typed(".auto-input", {
     strings: [
+        "Hi, I'm ...",
         "Harshit, an Engineer",
         "Harsh, a Writer",
         "Harry, an Artist",
     ],
     typeSpeed: 100,
     backSpeed: 100,
+    startDelay: 2700,
+    backDelay: 1000,
     loop: true,
 });
 
@@ -29,6 +32,7 @@ var terminal_text = new Typed(".terminal-text", {
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~</a>$"
     ],
     typeSpeed: 30,
+    cursorChar: "▮",
 });
 
 function resetTyped (strings) {
@@ -36,6 +40,7 @@ function resetTyped (strings) {
     terminal_text = new Typed('.terminal-text', {
       strings: strings,
       typeSpeed: 30,
+      cursorChar: "▮",
     });
 }
 
@@ -79,6 +84,7 @@ document.getElementById("mimicry").onclick = function() {
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~</a>$ cd Mimicry Artist<br>"+
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Mimicry Artist</a>$ ls<br>"+
         "Nothing to show you yet<br>"+
+        "Soon there will be something<br>"+
         "Aa gaye mera tamasha dekhne<br>"
     ]);
 };
@@ -88,7 +94,8 @@ document.getElementById("flutist").onclick = function() {
     resetTyped([
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~</a>$ cd Flutist<br>"+
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Flutist</a>$ ls<br>"+
-        "Nothing to show you yet<br>"
+        "Nothing to show you yet<br>"+
+        "Soon there will be something<br>"
     ]);
 };
 
@@ -96,19 +103,14 @@ document.getElementById("contact").onclick = function() {
     document.getElementById("terminal-top").innerHTML = "@harry!~/Contact";
     resetTyped([
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~</a>$ cd Contact<br>"+
-        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Contact</a>$ cd gmail<br>"+
-        "singhharshit9080@gmail.com<br>"+
-        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Contact/gmail</a>$ cd ..<br>"+
-        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Contact</a>$ cd linkedin Profile<br>"+
-        "<a href='https://www.linkedin.com/in/harshit-singh-5850131bb/' target='_blank' rel='noopener noreferrer'>Harshit Singh</a><br>"+
-        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Contact/Linkedin Profile</a>$ cd ..<br>"+
-        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Contact</a>$ cd Instagram<br>"+
-        "<a href='https://www.instagram.com/7purplethursday/' target='_blank' rel='noopener noreferrer'>@7purplethursday</a><br>"+
-        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Contact/Instagram</a>$ cd ..<br>"+
-        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Contact</a>$ cd mobile<br>"+
-        "8587864950<br>"+
-        "7982728603<br>"+
-        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Contact/mobile</a>$"
+        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Contact</a>$ ls<br>"+
+        "gmail1 : artofharry00@gmail.com<br>"+
+        "gmail2 : singhharshit9080@gmail.com<br>"+
+        "Linkedin : <a href='https://www.linkedin.com/in/harshit-singh-5850131bb/' target='_blank' rel='noopener noreferrer'>Harshit Singh</a><br>"+
+        "Instagram : <a href='https://www.instagram.com/7purplethursday/' target='_blank' rel='noopener noreferrer'>@7purplethursday</a><br>"+
+        "mobile1 : 8587864950<br>"+
+        "mobile2 : 7982728603<br>"+
+        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Contact</a>$"
     ]);
 };
 
@@ -158,7 +160,6 @@ function twinkle(n){
             console.log(color);
             element.style.top = t+"px";
             element.style.left = l+"px";
-
             element.style.backgroundColor = "rgb(255, 255, 255," + 1/op + ")";
 
         }, 100);
