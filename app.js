@@ -1,4 +1,5 @@
 // import Typed from 'typed.js';
+var terminalSpeed = 15;
 
 var typed = new Typed(".auto-input", {
     strings: [
@@ -16,10 +17,10 @@ var typed = new Typed(".auto-input", {
 var description = new Typed(".desc", {
     strings: [
         "<div class='type'><div class='icon'><img src='icons/developer.png' alt=''></div>Developer</div>"+
-        "<div class='type'><div class='icon'><img src='icons/design.png' alt=''></div>Writer</div>"+
+        "<div class='type'><div class='icon'><img src='icons/writer.png' alt=''></div>Writer</div>"+
         "<div class='type'><div class='icon'><img src='icons/sketch.png' alt=''></div>Sketch Artist</div>"+
         "<div class='type'><div class='icon'><img src='icons/mimicry.png' alt=''></div>Mimicry Artist</div>"+
-        "<div class='type'><div class='icon'><img src='icons/developer.png' alt=''></div>Flutist</div>"+
+        "<div class='type'><div class='icon'><img src='icons/flute.png' alt=''></div>Flutist</div>"+
         "<br>Sometimes try Beat-Boxing as well<br><br>"+
         "Your eyes are Story Teller<br>"
     ],
@@ -29,7 +30,7 @@ var terminal_text = new Typed(".terminal-text", {
     strings: [
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~</a>$"
     ],
-    typeSpeed: 30,
+    typeSpeed: terminalSpeed,
     cursorChar: "▮",
 });
 
@@ -43,13 +44,14 @@ var terminal_text = new Typed(".terminal-text", {
 //         cursorChar: "▮",
 //     });
 // }
+
 var popTerminalText;
 
 function resetTyped (strings) {
     terminal_text.destroy();
     terminal_text = new Typed('.terminal-text', {
       strings: strings,
-      typeSpeed: 30,
+      typeSpeed: terminalSpeed,
       cursorChar: "▮",
     });
 }
@@ -66,7 +68,7 @@ function popTerminal() {
 function resetPopTyped(strings) {
     popTerminalText = new Typed(".pop-terminal-text", {
         strings: str,
-        typeSpeed: 30,
+        typeSpeed: terminalSpeed,
         cursorChar: "▮",
     });
 }
