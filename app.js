@@ -88,7 +88,7 @@ document.getElementById("developer").onclick = function() {
         document.getElementById("terminal-top").innerHTML = "@harry!~/Developer";
         resetTyped(str);
     }
-    else{        
+    else{
         popTerminal();
         resetPopTyped(str);
     }
@@ -196,8 +196,8 @@ function twinkle(n){
     
     const elements = document.getElementsByClassName("circle");
     
-    let maxl = screen.width-200;
-    let maxt = screen.height-230;
+    let maxl = window.innerWidth;
+    let maxt = window.innerHeight;
     let maxop = 20;
     
     function randomBais(){
