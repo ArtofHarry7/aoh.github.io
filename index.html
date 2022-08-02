@@ -30,36 +30,47 @@
         <section class="home">
             <div class="changing-text">
                 <h1><span class="auto-input"></span></h1>
-                <div>
-                    <div class="fields">
-                        <div class="field" id="developer"></div>
-                        <div class="field" id="writer"></div>
-                        <div class="field" id="sketch"></div>
-                        <div class="field" id="mimicry"></div>
-                        <div class="field" id="flutist"></div>
-                    </div>
-                    <div><span class="desc"></span></div>
+                <!-- <div> -->
+                <div class="fields" id="fields">
+                    <div class="field" id="developer"></div>
+                    <div class="field" id="writer"></div>
+                    <div class="field" id="sketch"></div>
+                    <div class="field" id="mimicry"></div>
+                    <div class="field" id="flutist"></div>
                 </div>
+                <div><span class="desc"></span></div>
+                <!-- </div> -->
                 <a id="contact" class="btn">Contact Me</a>
                 <a href="https://drive.google.com/file/d/1RDEVAJYP-W35jXvr20Q-QotHBwkHqBhz/view?usp=sharing" target='_blank' rel='noopener noreferrer' class="btn-fill cv">Resume</a>
             </div>
-            <div class="terminal">
-                <div id="terminal-top" class="terminal-top">
-                    @harry:~
-                </div>
-                <div>
-                    <!-- <div id="start">
-                        <div class="green-color">"ArtofHarry :~$"</div>
-                    </div> -->
-                    <span id="terminal-text" class="terminal-text"></span>
+            <!-- <div class="terminal-kill"> -->
+                <div class="terminal">
+                    <div id="terminal-top" class="terminal-top">
+                        @harry:~
+                    </div>
+                    <div>
+                        <!-- <div id="start">
+                            <div class="green-color">"ArtofHarry :~$"</div>
+                        </div> -->
+                        <span id="terminal-text" class="terminal-text"></span>
 
+                    </div>
                 </div>
-            </div>
+            <!-- </div> -->
         </section>
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
         <script src="app.js"></script>
-        <div class="hide-everything">
+        <!-- <div class="hide-everything">
             <h1>Use laptop or if you are already using laptop increase the size of browser window. Thank you for visiting.</h1>
+        </div> -->
+        <div id="pop-terminal">
+            <div id="pop-terminal-top" class="terminal-top">
+                <div onclick="removeTerminal()" class="cross" id="cross"></div>
+                <div class="terminal-user">@harry:~</div>
+            </div>
+            <div>
+                <span id="pop-terminal-text" class="pop-terminal-text"></span>
+            </div>
         </div>
     </body>
     <footer>
