@@ -1,5 +1,4 @@
-// import Typed from 'typed.js';
-var terminalSpeed = 15;
+var terminalSpeed = 10;
 
 var typed = new Typed(".auto-input", {
     strings: [
@@ -34,17 +33,6 @@ var terminal_text = new Typed(".terminal-text", {
     cursorChar: "▮",
 });
 
-// function resetPopText(strings) {
-//     popTerminalText.destroy();
-//     popTerminalText = new Typed(".pop-terminal-text", {
-//         strings: [
-//             "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~</a>$"
-//         ],
-//         typeSpeed: 30,
-//         cursorChar: "▮",
-//     });
-// }
-
 var popTerminalText;
 
 function resetTyped (strings) {
@@ -59,8 +47,6 @@ function resetTyped (strings) {
 function popTerminal() {
     var popterminal = document.getElementById("pop-terminal");
     popterminal.style.opacity = "1";
-    popterminal.style.top = "200px";
-    popterminal.style.left = "4vw";
     popterminal.style.height = "500px";
     popterminal.style.width = "90vw";
 }
@@ -77,11 +63,13 @@ document.getElementById("developer").onclick = function() {
     str = [
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~</a>$ cd Developer<br>"+
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Developer</a>$ cat Developer.txt<br>"+
-        "Currently persuing Bachelors of Technology with Computer Science in IIT BHU varanasi<br>"+
+        "Currently persuing Bachelors of Technology with Computer Science in IIT BHU varanasi.<br>"+
+        "I am full-Stack Developer, have worked with django framework.<br>"+
         "Designed a simple food delivery website : <a href='http://artofharry7.pythonanywhere.com/menu/' target='_blank' rel='noopener noreferrer'>Delish</a><br>"+
         "Here is my github profile : <a href='https://github.com/ArtofHarry7' target='_blank' rel='noopener noreferrer'>gitHub</a><br>"+
         "Here is my codeforces profile : <a href='https://codeforces.com/profile/Harshit_Singh' target='_blank' rel='noopener noreferrer'>CodeForces</a><br>"+
         "Here is my codechef profile : <a href='https://www.codechef.com/users/artofharry' target='_blank' rel='noopener noreferrer'>CodeChef</a><br>"+
+        "I have also worked on Deep Learning, Machine Learning and Artificial Intelligence.<br>"+
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Developer</a>$"
     ]
     if(window.innerWidth >= 1250){
@@ -114,9 +102,10 @@ document.getElementById("sketch").onclick = function() {
 
 document.getElementById("writer").onclick = function() {
     str = [
-        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~</a>$ cd Writer<br>"+
+        "<p></p><a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~</a>$ cd Writer<br>"+
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/writer</a>$ cat Writer.txt<br>"+
-        "Blog page : <a href='https://alfaz-e-harsh.blogspot.com/' target='_blank' rel='noopener noreferrer'>मुन्तज़िर</a><br>"+
+        "Mostly I write Poems in Hindi and here is my Blog page : <a href='https://alfaz-e-harsh.blogspot.com/' target='_blank' rel='noopener noreferrer'>मुन्तज़िर</a> for poems<br>"+
+        "Have written a few English Poems, Songs and writing Story(not complete yet)<br></p>"+
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/writer</a>$"
     ]
     if(window.innerWidth >= 1250){
@@ -247,8 +236,6 @@ twinkle(500);
 function removeTerminal() {
     popterminal = document.getElementById("pop-terminal");
     popterminal.style.opacity = "0";
-    popterminal.style.top = "0px";
-    popterminal.style.left = "0px";
     popterminal.style.height = "0px";
     popterminal.style.width = "0px";
     popTerminalText.destroy();

@@ -1,9 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    /* font-size: 16px; */
     color: #fff;
-    /* font-family: 'poppins', 'sans-serif'; */
 }
 
 ::-webkit-scrollbar {
@@ -14,7 +12,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    /* background-color: black; */
     padding-bottom: 2rem;
     height: 2.5rem;
 }
@@ -37,21 +34,18 @@ nav ul li a {
 .artof {
     color: #7481f0;
     font-size: 1.5rem;
-    /* font-family: serif; */
     font-weight: 950;
 }
 
 .harry {
     color:gray;
     font-size: 2rem;
-    /* font-family: serif; */
     font-weight: 950;
 }
 
 body {
     padding: 3rem;
     padding-top: 1rem;
-    /* background-color: #0b022e; */
     background-color: #000;
 }
 
@@ -123,18 +117,15 @@ body {
     position: absolute;
     height: 280px;
     width: 200px;
-    /* background-color: rgb(255, 0, 0); */
 }
 
 .field {
-    /* background-color: rgb(255, 0, 0); */
     width: 100%;
     height: 20%;
     cursor: pointer;
 }
 
 .terminal {
-    /* position: relative; */
     display: flex;
     flex-direction: column;
     top: 10px;
@@ -152,7 +143,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* position: absolute; */
     background-color: rgb(78, 75, 75);
     width: 100%;
     height: 35px;
@@ -164,22 +154,19 @@ body {
 
 .terminal-text {
     line-height: 27px;
-    /* margin: 5px; */
-    /* width: 100%; */
     font-size: 13px;
     font-family: sans-serif;
     letter-spacing: 2px;
     font-weight: bold;
-    /* background-color: rgb(10, 10, 10); */
 }
 
 .green-color {
-    color: green;
+    color: rgba(7, 206, 7, 0.856);
     font-weight: 27px;
 }
 
 .blue-color {
-    color: blue;
+    color: rgba(45, 132, 247, 0.87);
     font-weight: 27px;
 }
 
@@ -198,12 +185,8 @@ body {
     display: flex;
     flex-direction: column;
     position: absolute;
-    /* top: 200px;
+    top: 200px;
     left: 4vw;
-    height: 500px;
-    width: 90vw; */
-    top: 0px;
-    left: 0px;
     height: 0px;
     width: 0px;
     background-color: rgb(12, 12, 12);
@@ -217,21 +200,23 @@ body {
 
 
 @media screen and (max-width: 1250px) {
-    /* .field {
-        background-color: rgb(255, 0, 0, 0.3);
-    } */
     body {
         padding-left: 1rem;
     }
     .terminal {
         display: none;
     }
+    .pop-terminal-text {
+        line-height: 27px;
+        font-size: 13px;
+        font-family: sans-serif;
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
     .changing-text h1 {
         font-size: 50px;
         line-height: 60px;
         margin-bottom: 30px;
-    }inal-top {
-        display: flex;
     }
     .terminal-user {
         flex: 1;
