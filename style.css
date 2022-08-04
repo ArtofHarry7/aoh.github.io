@@ -185,7 +185,7 @@ body {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 200px;
+    top: 100px;
     left: 4vw;
     height: 0px;
     width: 0px;

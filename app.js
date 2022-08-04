@@ -1,4 +1,4 @@
-var terminalSpeed = 10;
+var terminalSpeed = 3;
 
 var typed = new Typed(".auto-input", {
     strings: [
@@ -8,7 +8,7 @@ var typed = new Typed(".auto-input", {
     ],
     typeSpeed: 100,
     backSpeed: 100,
-    startDelay: 2700,
+    startDelay: 2000,
     backDelay: 1000,
     loop: true,
 });
@@ -18,11 +18,12 @@ var description = new Typed(".desc", {
         "<div class='type'><div class='icon'><img src='icons/developer.png' alt=''></div>Developer</div>"+
         "<div class='type'><div class='icon'><img src='icons/writer.png' alt=''></div>Writer</div>"+
         "<div class='type'><div class='icon'><img src='icons/sketch.png' alt=''></div>Sketch Artist</div>"+
-        "<div class='type'><div class='icon'><img src='icons/mimicry.png' alt=''></div>Mimicry Artist</div>"+
-        "<div class='type'><div class='icon'><img src='icons/flute.png' alt=''></div>Flutist</div>"+
+        // "<div class='type'><div class='icon'><img src='icons/mimicry.png' alt=''></div>Mimicry Artist</div>"+
+        // "<div class='type'><div class='icon'><img src='icons/flute.png' alt=''></div>Flutist</div>"+
         "<br>Sometimes try Beat-Boxing as well<br><br>"+
         "Your eyes are Story Teller<br>"
     ],
+    typeSpeed: 1,
 });
 
 var terminal_text = new Typed(".terminal-text", {
@@ -73,10 +74,11 @@ document.getElementById("developer").onclick = function() {
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Developer</a>$"
     ]
     if(window.innerWidth >= 1250){
-        document.getElementById("terminal-top").innerHTML = "@harry!~/Developer";
+        document.getElementById("terminal-top").innerHTML = "@harry~/Developer";
         resetTyped(str);
     }
     else{
+        document.getElementById("terminal-user").innerHTML = "@harry~/Developer";
         popTerminal();
         resetPopTyped(str);
     }
@@ -95,6 +97,7 @@ document.getElementById("sketch").onclick = function() {
         resetTyped(str);
     }
     else{
+        document.getElementById("terminal-user").innerHTML = "@harry~/Sketch Artist";
         popTerminal();
         resetPopTyped(str);
     }
@@ -113,6 +116,7 @@ document.getElementById("writer").onclick = function() {
         resetTyped(str);
     }
     else{
+        document.getElementById("terminal-user").innerHTML = "@harry~/Writer";
         popTerminal();
         resetPopTyped(str);
     }
