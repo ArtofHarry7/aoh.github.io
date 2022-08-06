@@ -204,8 +204,6 @@ function twinkle(n){
 
 
 nCircles = Math.floor(0.0008 * window.innerHeight * window.innerHeight);
-console.log(nCircles);
-console.log(window.innerHeight * window.innerHeight);
 twinkle(nCircles);
 
 function removeTerminal() {
