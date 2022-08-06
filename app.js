@@ -17,10 +17,12 @@ var description = new Typed(".desc", {
     strings: [
         "<div class='type'><div class='icon'><img src='icons/developer.png' alt=''></div>Developer</div>"+
         "<div class='type'><div class='icon'><img src='icons/writer.png' alt=''></div>Writer</div>"+
-        "<div class='type'><div class='icon'><img src='icons/sketch.png' alt=''></div>Sketch Artist</div>"+
+        "<div class='type'><div class='icon'><img src='icons/sketch.png' alt=''></div>Sketch Artist</div><br>"+
         // "<div class='type'><div class='icon'><img src='icons/mimicry.png' alt=''></div>Mimicry Artist</div>"+
         // "<div class='type'><div class='icon'><img src='icons/flute.png' alt=''></div>Flutist</div>"+
-        "<br>Sometimes try Beat-Boxing as well<br><br>"+
+        "A mimicry Artist<br>"+
+        "Playing flute just refreshes me<br>"+
+        "Sometimes try Beat-Boxing as well<br><br>"+
         "Your eyes are Story Teller<br>"
     ],
     typeSpeed: 1,
@@ -122,43 +124,6 @@ document.getElementById("writer").onclick = function() {
     }
 };
 
-document.getElementById("mimicry").onclick = function() {
-    str = [
-        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~</a>$ cd Mimicry Artist<br>"+
-        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Mimicry Artist</a>$ cat 'Mimicry.txt'<br>"+
-        "Nothing to show you yet<br>"+
-        "Soon there will be something<br>"+
-        "Aa gaye mera tamasha dekhne<br>"+
-        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Mimicry Artist</a>$"
-    ];
-    if(window.innerWidth >= 1250){
-        document.getElementById("terminal-top").innerHTML = "@harry!~/Mimicry Artist";
-        resetTyped(str);
-    }
-    else{
-        popTerminal();
-        resetPopTyped(str);
-    }
-};
-
-document.getElementById("flutist").onclick = function() {
-    str = [
-        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~</a>$ cd Flutist<br>"+
-        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Flutist</a>$ cat 'Flutist.txt'<br>"+
-        "Nothing to show you yet<br>"+
-        "Soon there will be something<br>"+
-        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~/Flutist</a>$"
-    ];
-    if(window.innerWidth >= 1250){
-        document.getElementById("terminal-top").innerHTML = "@harry!~/Flutist";
-        resetTyped(str);
-    }
-    else{
-        popTerminal();
-        resetPopTyped(str);
-    }
-};
-
 document.getElementById("contact").onclick = function() {
     str = [
         "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~</a>$ cd Contact<br>"+
@@ -191,7 +156,7 @@ function twinkle(n){
     
     let maxl = window.innerWidth;
     let maxt = window.innerHeight;
-    let maxop = 20;
+    let maxop = 10;
     
     function randomBais(){
         var tmp = Math.floor(Math.random()*2);
@@ -206,17 +171,15 @@ function twinkle(n){
         return 1;
     }
 
-    var colors = [[255, 0, 0], [100, 155, 155], [45, 210, 100], [90, 255, 55]];
+    var colors = [[255, 0, 255], [0, 0, 255], [255, 255, 255], [255, 255, 255], [255, 255, 255], [255, 255, 255]];
 
-    function move(element){
+    function move(element, color){
         var x = randomBais();
         var y = randomBais();
         var z = randomBais();
         var op = Math.floor(Math.random()*maxop);
         var l = Math.floor(Math.random()*maxl);
         var t = Math.floor(Math.random()*maxt);
-        var color = colors[0];
-        var cat = [0, 0, 0];
         setInterval(function(){
             y *= checkBais(t, 0, maxt);
             x *= checkBais(l, 0, maxl);
@@ -226,16 +189,24 @@ function twinkle(n){
             l += x;
             element.style.top = t+"px";
             element.style.left = l+"px";
-            element.style.backgroundColor = "rgb(255, 255, 255," + 1/op + ")";
+            element.style.backgroundColor = "rgb("+color.join()+"," + 1/op + ")";
 
         }, 100);
     };
 
-    for(var i = 0; i < elements.length; i++)
-        move(elements[i], i);
+    for(var i = 0; i < elements.length; i++){
+        move(
+            elements[i],
+            colors[Math.floor(Math.random()*colors.length)]
+        );
+    }
 };
 
-twinkle(500);
+
+nCircles = Math.floor(0.0008 * window.innerHeight * window.innerHeight);
+console.log(nCircles);
+console.log(window.innerHeight * window.innerHeight);
+twinkle(nCircles);
 
 function removeTerminal() {
     popterminal = document.getElementById("pop-terminal");
