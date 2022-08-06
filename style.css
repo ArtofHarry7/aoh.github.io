@@ -78,18 +78,21 @@ body {
 
 .btn {
     border-radius: 6px;
-    border: 2px solid #fff724;
+    /* border-top: 2px solid #fff724; */
+    /* border-left: 2px solid #fff724; */
     color: #fff724;
     padding: 10px 30px;
     text-decoration: none;
-    font-weight: 600;
+    /* font-weight: 600; */
     cursor: pointer;
+    box-shadow: 0px -2px 4px rgb(255, 255, 0, 0.5);
 }
 
 .btn:hover {
-    background-color: #fff724;
-    color: black;
-    font-weight: 600;
+    /* background-color: #fff724; */
+    /* color: black; */
+    /* font-weight: 600; */
+    box-shadow: inset 0px -2px 4px rgb(255, 255, 0, 0.5);
 }
 
 .btn-fill {
@@ -98,14 +101,16 @@ body {
     padding: 10px 30px;
     color: black;
     text-decoration: none;
-    border: 2px solid #fff724;
+    /* border: 2px solid #fff724; */
     font-weight: 600;
     cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
 }
 
 .btn-fill:hover {
-    background-color: rgb(0, 0, 0, 0);
-    color: #fff724;
+    /* background-color: rgb(0, 0, 0, 0); */
+    /* color: #fff724; */
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.7);
 }
 
 .type {
