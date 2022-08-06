@@ -28,38 +28,30 @@ var description = new Typed(".desc", {
     typeSpeed: 1,
 });
 
-var terminal_text = new Typed(".terminal-text", {
-    strings: [
-        "<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~</a>$"
-    ],
-    typeSpeed: terminalSpeed,
-    cursorChar: "▮",
-});
-
+var terminal_text;
 var popTerminalText;
 
-function resetTyped (strings) {
-    terminal_text.destroy();
-    terminal_text = new Typed('.terminal-text', {
+function resetTyped (strings, textSpaceId) {
+    if(terminal_text != undefined){
+        terminal_text.destroy();
+    }
+    terminal_text = new Typed(textSpaceId, {
       strings: strings,
       typeSpeed: terminalSpeed,
       cursorChar: "▮",
     });
 }
 
+resetTyped(
+    ["<a class='green-color'>ArtofHarry</a>:<a class='blue-color'>~</a>$"],
+    '.terminal-text'
+);
+
 function popTerminal() {
     var popterminal = document.getElementById("pop-terminal");
     popterminal.style.opacity = "1";
     popterminal.style.height = "500px";
     popterminal.style.width = "90vw";
-}
-
-function resetPopTyped(strings) {
-    popTerminalText = new Typed(".pop-terminal-text", {
-        strings: str,
-        typeSpeed: terminalSpeed,
-        cursorChar: "▮",
-    });
 }
 
 document.getElementById("developer").onclick = function() {
@@ -77,12 +69,13 @@ document.getElementById("developer").onclick = function() {
     ]
     if(window.innerWidth >= 1250){
         document.getElementById("terminal-top").innerHTML = "@harry~/Developer";
-        resetTyped(str);
+        resetTyped(str, '.terminal-text');
     }
     else{
         document.getElementById("terminal-user").innerHTML = "@harry~/Developer";
         popTerminal();
-        resetPopTyped(str);
+        // resetPopTyped(str);
+        resetTyped(str, '.pop-terminal-text');
     }
 };
 
@@ -96,12 +89,12 @@ document.getElementById("sketch").onclick = function() {
     ];
     if(window.innerWidth >= 1250){
         document.getElementById("terminal-top").innerHTML = "@harry!~/Sketch Artist";
-        resetTyped(str);
+        resetTyped(str, '.terminal-text');
     }
     else{
         document.getElementById("terminal-user").innerHTML = "@harry~/Sketch Artist";
         popTerminal();
-        resetPopTyped(str);
+        resetTyped(str, '.pop-terminal-text');
     }
 };
 
@@ -115,12 +108,12 @@ document.getElementById("writer").onclick = function() {
     ]
     if(window.innerWidth >= 1250){
         document.getElementById("terminal-top").innerHTML = "@harry!~/Writer";
-        resetTyped(str);
+        resetTyped(str, '.terminal-text');
     }
     else{
         document.getElementById("terminal-user").innerHTML = "@harry~/Writer";
         popTerminal();
-        resetPopTyped(str);
+        resetTyped(str, '.pop-terminal-text');
     }
 };
 
@@ -138,11 +131,11 @@ document.getElementById("contact").onclick = function() {
     ];
     if(window.innerWidth >= 1250){
         document.getElementById("terminal-top").innerHTML = "@harry!~/Contact";
-        resetTyped(str);
+        resetTyped(str, '.terminal-text');
     }
     else{
         popTerminal();
-        resetPopTyped(str);
+        resetTyped(str, '.pop-terminal-text');
     }
 };
 
@@ -183,6 +176,10 @@ function twinkle(n){
         setInterval(function(){
             y *= checkBais(t, 0, maxt);
             x *= checkBais(l, 0, maxl);
+            element.onmouseover = function(){
+                x *= -1;
+                y *= -1;
+            };
             z *= checkBais(op, 1, maxop);
             op += z;
             t += y;
@@ -190,14 +187,14 @@ function twinkle(n){
             element.style.top = t+"px";
             element.style.left = l+"px";
             element.style.backgroundColor = "rgb("+color.join()+"," + 1/op + ")";
-
         }, 100);
     };
 
     for(var i = 0; i < elements.length; i++){
         move(
             elements[i],
-            colors[Math.floor(Math.random()*colors.length)]
+            colors[Math.floor(Math.random()*colors.length)],
+            
         );
     }
 };
@@ -211,5 +208,4 @@ function removeTerminal() {
     popterminal.style.opacity = "0";
     popterminal.style.height = "0px";
     popterminal.style.width = "0px";
-    popTerminalText.destroy();
 };
